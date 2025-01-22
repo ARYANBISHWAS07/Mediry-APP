@@ -62,7 +62,7 @@ const Dashboard = ({ navigation }) => {
                 resizeMode="cover"
                 onAnimationFinish={handleAnimationFinish}
               />
-
+              
               <TouchableOpacity
                 onPress={navigation.openDrawer}
                 style={styles.menuButtonInAnimation}

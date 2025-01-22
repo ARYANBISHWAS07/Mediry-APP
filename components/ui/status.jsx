@@ -6,5 +6,3 @@ const CustomStatus = () => {
 };
 
 export default CustomStatus;
-
-const styles = StyleSheet.create({});
