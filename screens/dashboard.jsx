@@ -12,6 +12,7 @@ import styled from "styled-components/native";
 import LottieView from "lottie-react-native";
 import DrawerSceneWrapper from "../components/sidebar";
 import { LinearGradient } from "expo-linear-gradient";
+import Background from "../components/background/background1";
 
 const { width, height } = Dimensions.get("window");
 
@@ -40,7 +41,7 @@ const Dashboard = ({ navigation }) => {
   return (
     <DrawerSceneWrapper>
       <SafeArea>
-        <LinearGradient colors={["#4A90E2", "#50C9C3", "#1D3557"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.container}>
+        <Background>
           <View
             style={[
               styles.animationWrapper,
@@ -69,7 +70,7 @@ const Dashboard = ({ navigation }) => {
               </TouchableOpacity>
             </View>
           </View>
-          </LinearGradient>
+          </Background>
       </SafeArea>
     </DrawerSceneWrapper>
   );
