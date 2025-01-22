@@ -11,6 +11,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import styled from "styled-components/native";
 import LottieView from "lottie-react-native";
 import DrawerSceneWrapper from "../components/sidebar";
+import { LinearGradient } from "expo-linear-gradient";
 
 const { width, height } = Dimensions.get("window");
 
@@ -22,7 +23,6 @@ const Dashboard = ({ navigation }) => {
     navigation.openDrawer();
   };
 
-  // Navigate to other tab
   const goToSettings = () => {
     navigation.navigate("Setting");
   };
@@ -40,7 +40,7 @@ const Dashboard = ({ navigation }) => {
   return (
     <DrawerSceneWrapper>
       <SafeArea>
-        <View style={styles.container}>
+        <LinearGradient colors={["#4A90E2", "#50C9C3", "#1D3557"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.container}>
           <View
             style={[
               styles.animationWrapper,
@@ -69,7 +69,7 @@ const Dashboard = ({ navigation }) => {
               </TouchableOpacity>
             </View>
           </View>
-        </View>
+          </LinearGradient>
       </SafeArea>
     </DrawerSceneWrapper>
   );
