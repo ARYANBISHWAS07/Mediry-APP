@@ -13,6 +13,7 @@ import LottieView from "lottie-react-native";
 import DrawerSceneWrapper from "../components/sidebar";
 import { LinearGradient } from "expo-linear-gradient";
 import Background from "../components/background/background1";
+import CustomStatus from "../components/ui/status";
 
 const { width, height } = Dimensions.get("window");
 
@@ -40,6 +41,7 @@ const Dashboard = ({ navigation }) => {
 
   return (
     <DrawerSceneWrapper>
+      <CustomStatus />
       <SafeArea>
         <Background>
           <View
@@ -70,7 +72,7 @@ const Dashboard = ({ navigation }) => {
               </TouchableOpacity>
             </View>
           </View>
-          </Background>
+        </Background>
       </SafeArea>
     </DrawerSceneWrapper>
   );
@@ -80,16 +82,11 @@ export default Dashboard;
 
 const SafeArea = styled.SafeAreaView`
   flex: 1;
-  background-color: #3450a1;
-  padding-top: ${Platform.select({
-    android: `${StatusBar.currentHeight}px`,
-    ios: "0px",
-  })};
 `;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, // Ensures that the content takes up the whole screen
+    flex: 1,
     justifyContent: "flex-start",
   },
   animationWrapper: {
@@ -117,6 +114,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     opacity: 100,
+    top: "0%",
   },
   menuButtonInAnimation: {
     position: "absolute",

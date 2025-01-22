@@ -6,7 +6,7 @@ import LinearGradient from "expo-linear-gradient";
 const App = () => {
   return (
     <NavigationContainer>
-        <DrawerNavigator />
+      <DrawerNavigator />
     </NavigationContainer>
   );
 };

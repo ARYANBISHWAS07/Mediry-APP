@@ -4,12 +4,14 @@ import {
   StyleSheet,
   Platform,
   useWindowDimensions,
+  Dimensions,
 } from "react-native";
 import React from "react";
 import Animated, {
   interpolate,
   useAnimatedStyle,
 } from "react-native-reanimated";
+import Colors from "../constants/colors";
 import { useDrawerProgress } from "@react-navigation/drawer";
 
 const DrawerSceneWrapper = ({ children }) => {
@@ -51,5 +53,7 @@ export default DrawerSceneWrapper;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    height: Dimensions.get("window").height,
+    backgroundColor: Colors.teal,
   },
 });
