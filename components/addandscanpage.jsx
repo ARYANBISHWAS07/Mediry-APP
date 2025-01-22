@@ -11,10 +11,11 @@ import styled from "styled-components/native";
 import DrawerSceneWrapper from "./sidebar";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { LinearGradient } from "expo-linear-gradient";
+import Background from "./background/background1";
 
 const Addandscanpage = () => {
   return (
-    <SafeArea>
+    <Background>
       <DrawerSceneWrapper>
         <View style={styles.container}>
           <TouchableOpacity
@@ -46,7 +47,7 @@ const Addandscanpage = () => {
           </TouchableOpacity>
         </View>
       </DrawerSceneWrapper>
-    </SafeArea>
+      </Background>
   );
 };
 

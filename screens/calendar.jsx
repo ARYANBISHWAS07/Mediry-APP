@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Agenda } from "react-native-calendars";
 import styled from "styled-components/native";
 import { format } from "date-fns";
+import Background from "../components/background/background1";
 
 function App() {
   const [expandedItems, setExpandedItems] = useState({});
@@ -41,8 +42,7 @@ function App() {
   };
 
   return (
-    <SafeArea>
-      <View style={styles.container}>
+    <Background>
         <Agenda
           items={items}
           renderItem={(item) => (
@@ -74,8 +74,7 @@ function App() {
           )}
           selected={today}
         />
-      </View>
-    </SafeArea>
+    </Background>
   );
 }
 
