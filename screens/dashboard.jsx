@@ -10,7 +10,7 @@ import {
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import styled from "styled-components/native";
 import LottieView from "lottie-react-native";
-import DrawerSceneWrapper from "./sidebar";
+import DrawerSceneWrapper from "../components/sidebar";
 
 const { width, height } = Dimensions.get("window");
 

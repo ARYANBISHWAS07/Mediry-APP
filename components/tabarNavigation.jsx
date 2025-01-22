@@ -1,8 +1,9 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Dashboard from "./dashboard";
+import Dashboard from "../screens/dashboard";
 import Setting from "./setting";
-import CustomBottomTab from "./custom";
+import CustomBottomTab from "./ui/custom";
+import Calendar from "../screens/calendar";
 
 const BottomTab = () => {
   const Tab = createBottomTabNavigator();
@@ -13,7 +14,7 @@ const BottomTab = () => {
       screenOptions={{ headerShown: false }}
     >
       <Tab.Screen name="Home" component={Dashboard} />
-      <Tab.Screen name="Setting" component={Setting} />
+      <Tab.Screen name="Calendar" component={Calendar} />
     </Tab.Navigator>
   );
 };
