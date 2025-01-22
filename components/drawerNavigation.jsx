@@ -3,6 +3,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Platform } from "react-native";
 import BottomTab from "./tabarNavigation";
+import Addandscanpage from "./addandscanpage";
 
 const Colors = {
   bg: "#009688",
@@ -51,6 +52,7 @@ const DrawerNavigator = () => {
           drawerIcon: (options) => drawerIcon(options, "home-outline"),
         }}
       />
+      <Drawer.Screen name="Add" component={Addandscanpage} />
     </Drawer.Navigator>
   );
 };
